@@ -16,6 +16,10 @@ public class Hero {
 		return this.hp;
 	}
 
+	public Hero(){
+		System.out.println("I'm a hero !");
+	}
+
 	public void attack(Matango m) {
 		System.out.println(this.name + "s attack !");
 		m.setHp(m.getHp() - 5);
@@ -24,5 +28,11 @@ public class Hero {
 
 	public void run() {
 		System.out.println(this.name + "runs away !");
+	}
+
+	public final void slip(){
+		this.hp -= 5;
+		System.out.println(this.name + "is slipping !");
+		System.out.println("5 damages !");
 	}
 }
